@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "安裝所需套件中..."
+echo "正在安裝依賴套件..."
 pip install -r requirements.txt
-echo "完成！請使用 python3 main.py 啟動"
+echo "安裝完成！請使用 python3 main.py 啟動機器人"

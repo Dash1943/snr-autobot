@@ -1,23 +1,19 @@
-# SNR 翻倍特化版機器人
+# SNR 自動交易機器人（翻倍特化版）
 
-## 使用方式：
-1. 填入 `config.py` 的 TOKEN 與金鑰
-2. 執行安裝指令：
+## 功能
+- 自動選出強勢幣種（模擬）
+- 多時間週期共振突破邏輯
+- 分批開倉 + 動態停利
+- Telegram 即時推播通知
 
-```bash
-chmod +x install.sh
-./install.sh
-```
-
+## 使用方式
+1. 編輯 config.py，填入 Telegram Bot Token 與 Chat ID
+2. 安裝依賴：
+   ```bash
+   chmod +x install.sh
+   ./install.sh
+   ```
 3. 啟動主程式：
-
-```bash
-python3 main.py
-```
-
-## 功能特色：
-- 多週期突破確認
-- 強幣篩選（Top Volume）
-- 自動調整槓桿
-- 分批出場與移動停利
-- 風險控制與 Telegram 回報系統
+   ```bash
+   python3 main.py
+   ```
