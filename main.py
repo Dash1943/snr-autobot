@@ -25,3 +25,35 @@ while True:
     except Exception as e:
         send_telegram_message(f"機器人錯誤：{e}")
     time.sleep(interval)
+import os
+import time
+import schedule
+from telegram_notifier import send_telegram_message
+
+# 啟動通知
+send_telegram_message("SNR 自動交易機器人啟動！")
+
+# 每日重啟指令
+schedule.every().day.at("00:00").do(lambda: os.system("reboot"))
+
+# Telegram 指令處理
+from telegram import Update, Bot
+from telegram.ext import Updater, CommandHandler, CallbackContext
+
+from config import TELEGRAM_TOKEN, TELEGRAM_CHAT_ID
+
+bot = Bot(token=TELEGRAM_TOKEN)
+updater = Updater(token=TELEGRAM_TOKEN, use_context=True)
+dispatcher = updater.dispatcher
+
+def status(update: Update, context: CallbackContext):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="機器人運作正常。")
+
+dispatcher.add_handler(CommandHandler("status", status))
+
+updater.start_polling()
+
+# 主迴圈
+while True:
+    schedule.run_pending()
+    time.sleep(1)
