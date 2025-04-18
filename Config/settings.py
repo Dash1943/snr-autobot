@@ -2,8 +2,8 @@ import os
 
 class Config:
     # API 配置
-    API_KEY = os.getenv("BYBIT_API_KEY")
-    API_SECRET = os.getenv("BYBIT_API_SECRET")
+    API_KEY = os.getenv("gAj6NRhYQWkTr7M4bE")
+    API_SECRET = os.getenv("uAdLxWhtjqZU5NNcHmgFu0N283Wi57NGBIL3")
     BASE_URL = "https://api.bybit.com"
     
     # 账户配置
