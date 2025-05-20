@@ -7,10 +7,10 @@ from dotenv import load_dotenv
 
 # 載入環境變數
 load_dotenv()
-API_KEY    = os.getenv("BYBIT_API_KEY")
-API_SECRET = os.getenv("BYBIT_API_SECRET")
-BOT_TOKEN  = os.getenv("TELEGRAM_TOKEN")
-CHAT_ID    = os.getenv("TELEGRAM_CHAT_ID")
+API_KEY    = os.getenv("yclkIflIvkWf4i01On")
+API_SECRET = os.getenv("kG4nmQE0BbtVSSqetw3eK3vRcp0yvYqCvFde")
+BOT_TOKEN  = os.getenv("gAj6NRhYQWkTr7M4bE")
+CHAT_ID    = os.getenv("uAdLxWhtjqZU5NNcHmgFu0N283Wi57NGBIL3")
 
 # 初始化 Bybit 客戶端與 Telegram Bot
 client = HTTP("https://api.bybit.com", api_key=API_KEY, api_secret=API_SECRET)
